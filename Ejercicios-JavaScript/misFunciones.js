@@ -52,3 +52,17 @@ function convertirGR(id) {
     document.getElementById("grados").value = grad;
     document.getElementById("radianes").value = rad;
 }
+
+/**
+ * La función mostrar_ocultar se usa para mostrar u ocultar el elemento div con id="divMO"
+ * @param {string} valorMO - Se utiliza para determinar qué div se mostrará u ocultará.
+ *
+ * @author Angelo Carlos Capello
+ */
+function mostrar_ocultar(valorMO) {
+    if (valorMO === "val_mostrar") {
+        document.getElementById("divMO").style.display = 'block';
+    } else if (valorMO === "val_ocultar") {
+        document.getElementById("divMO").style.display = 'none';
+    }
+}

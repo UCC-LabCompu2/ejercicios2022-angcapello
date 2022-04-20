@@ -68,6 +68,12 @@ function mostrar_ocultar(valorMO) {
     }
 }
 
+/**
+ * La función calcula la suma de dos números
+ *
+ * @author Angelo Carlos Capello
+ */
+
 function calcularSuma() {
     let num1, num2;
 
@@ -75,6 +81,12 @@ function calcularSuma() {
     num2 = Number(document.getElementsByName("sum_num2") [0].value);
     document.getElementsByName("sum_total")[0].value = num1 + num2;
 }
+
+/**
+ * La función calcula la resta de dos números
+ *
+ * @author Angelo Carlos Capello
+ */
 
 function calcularResta() {
     let num1, num2;
@@ -84,6 +96,12 @@ function calcularResta() {
     document.getElementsByName("res_total")[0].value = num1 - num2;
 }
 
+/**
+ * La función calcula la multiplicación de dos números
+ *
+ * @author Angelo Carlos Capello
+ */
+
 function calcularMultiplicacion() {
     let num1, num2;
 
@@ -91,6 +109,12 @@ function calcularMultiplicacion() {
     num2 = Number(document.getElementsByName("mul_num2") [0].value);
     document.getElementsByName("mul_total")[0].value = num1 * num2;
 }
+
+/**
+ * La función calcula la división de dos números
+ *
+ * @author Angelo Carlos Capello
+ */
 
 function calcularDivision() {
     let num1, num2;

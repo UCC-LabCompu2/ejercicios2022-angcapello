@@ -95,7 +95,7 @@ function calcularSuma() {
 
     num1 = Number(document.getElementsByName("sum_num1") [0].value);
     num2 = Number(document.getElementsByName("sum_num2") [0].value);
-    document.getElementsByName("sum_total")[0].value = num1 + num2;
+    document.getElementsByClassName("sum_total")[0].innerHTML = num1 + num2;
 }
 
 /**
@@ -109,7 +109,7 @@ function calcularResta() {
 
     num1 = Number(document.getElementsByName("res_num1") [0].value);
     num2 = Number(document.getElementsByName("res_num2") [0].value);
-    document.getElementsByName("res_total")[0].value = num1 - num2;
+    document.getElementsByClassName("res_total")[0].innerHTML = num1 - num2;
 }
 
 /**
@@ -123,13 +123,13 @@ function calcularMultiplicacion() {
 
     num1 = Number(document.getElementsByName("mul_num1") [0].value);
     num2 = Number(document.getElementsByName("mul_num2") [0].value);
-    document.getElementsByName("mul_total")[0].value = num1 * num2;
+    document.getElementsByClassName("mul_total")[0].innerHTML = num1 * num2;
 }
 
 /**
  * La función calcula la división de dos números
  *
- * @author Angelo Carlos Capello
+ * @author AngelogetElementsByClassName Carlos Capello
  */
 
 function calcularDivision() {
@@ -137,5 +137,5 @@ function calcularDivision() {
 
     num1 = Number(document.getElementsByName("div_num1") [0].value);
     num2 = Number(document.getElementsByName("div_num2") [0].value);
-    document.getElementsByName("div_total")[0].value = num1 / num2;
+    document.getElementsByClassName("div_total")[0].innerHTML = num1 / num2;
 }

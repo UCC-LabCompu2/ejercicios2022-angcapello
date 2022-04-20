@@ -1,8 +1,12 @@
 /**
- * Descripción
+ * Conversión de unidades, de metros, pulgadas, pies y yardas
+ *
+ *
  * @method cambiarUnidades
- * @param id
- * @param valor
+ * @param {string} id - El id de los inputs de metros, pulgadas, pies y yardas
+ * @param {number} valor - El valor de los inputs de metros, pulgadas, pies y yardas
+ *
+ * @doc-author Angelo Carlos Capello
  */
 
 function cambiarUnidades(id, valor) {

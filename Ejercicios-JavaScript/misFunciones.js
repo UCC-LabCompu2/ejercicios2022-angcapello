@@ -140,6 +140,12 @@ function calcularDivision() {
     document.getElementsByClassName("div_total")[0].innerHTML = num1 / num2;
 }
 
+/**
+ * La función carga la segunda web con los parametros pasado por URL
+ *
+ * @author Angelo Carlos Capello
+ */
+
 function cargarWeb() {
     let distancia, unidad, urlCompleta;
 
@@ -149,6 +155,12 @@ function cargarWeb() {
     urlCompleta = "segundaWeb.html#" + distancia + "#" + unidad;
     window.open(urlCompleta)
 }
+
+/**
+ * La función carga los parametros pasado por la URL al input del formulario
+ *
+ * @author Angelo Carlos Capello
+ */
 
 function cargarResultado() {
     let urlCompleta, distancia, unidad;
@@ -160,6 +172,12 @@ function cargarResultado() {
     document.getElementById("dist").value = distancia + " " + unidad;
 }
 
+/**
+ * La función carga la segunda web con los parametros guardado en el Local Storage
+ *
+ * @author Angelo Carlos Capello
+ */
+
 function guardarLocalStorage() {
     let distancia, unidad;
     distancia = document.getElementById("distancia").value;
@@ -168,6 +186,12 @@ function guardarLocalStorage() {
     localStorage.setItem("unidadesLS", unidad);
     window.open('2_web.html');
 }
+
+/**
+ * La función toma los valores guardado en el Local Storage y lo intrudce en el input del formulario
+ *
+ * @author Angelo Carlos Capello
+ */
 
 function cargarLocalStorage() {
     let distancia, unidad;

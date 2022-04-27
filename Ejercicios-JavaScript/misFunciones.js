@@ -129,7 +129,7 @@ function calcularMultiplicacion() {
 /**
  * La función calcula la división de dos números
  *
- * @author AngelogetElementsByClassName Carlos Capello
+ * @author Angelo Carlos Capello
  */
 
 function calcularDivision() {
@@ -138,4 +138,24 @@ function calcularDivision() {
     num1 = Number(document.getElementsByName("div_num1") [0].value);
     num2 = Number(document.getElementsByName("div_num2") [0].value);
     document.getElementsByClassName("div_total")[0].innerHTML = num1 / num2;
+}
+
+function cargarWeb() {
+    let cantidad, unidad, urlCompleta;
+
+    cantidad = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades") [0].value;
+
+    urlCompleta = "segundaWeb.html#" + cantidad + "#" + unidad;
+    window.open(urlCompleta)
+}
+
+function cargarResultado() {
+    let urlCompleta, cantidad, unidad;
+
+    urlCompleta = window.location.href.split("/")[5];
+    cantidad = urlCompleta.split("#")[1];
+    unidad = urlCompleta.split("#")[2];
+
+    document.getElementById("dist").value = cantidad + " " + unidad;
 }

@@ -200,3 +200,19 @@ function cargarLocalStorage() {
 
     document.getElementById('dist').value = distancia + ' ' + unidad;
 }
+
+function dibujarCirCuad() {
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let xMax = canvas.width;
+    let yMax = canvas.height;
+    let margen = 5;
+
+    ctx.fillStyle = "#333899";
+    ctx.fillRect(margen, yMax - 40 - margen, 40, 40);
+
+    ctx.arc(xMax / 2, yMax / 2, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#006c04";
+    ctx.fill();
+}

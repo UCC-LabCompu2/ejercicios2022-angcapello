@@ -216,3 +216,35 @@ function dibujarCirCuad() {
     ctx.fillStyle = "#006c04";
     ctx.fill();
 }
+
+let bandera;
+
+function dibujar(MouseEvent) {
+    let canvas = document.getElementById("canvasAdibujar");
+    let ctx = canvas.getContext("2d");
+
+    let posX = event.clientX;
+    let posY = event.clientY;
+    // ctx.fillRect(posX, posY,5,5);
+    // ctx.fill();
+
+    console.log(posX, posY);
+
+    canvas.onmousedown = function () {
+        bandera = true;
+    }
+    canvas.onmouseup = function () {
+        bandera = false
+    };
+    if (bandera) {
+        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fill();
+    }
+}
+
+function limpiarCanvas() {
+    let canvas = document.getElementById("canvasAdibujar");
+    let ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}

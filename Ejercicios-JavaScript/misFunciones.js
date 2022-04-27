@@ -141,21 +141,38 @@ function calcularDivision() {
 }
 
 function cargarWeb() {
-    let cantidad, unidad, urlCompleta;
+    let distancia, unidad, urlCompleta;
 
-    cantidad = document.getElementById("distancia").value;
+    distancia = document.getElementById("distancia").value;
     unidad = document.getElementsByName("unidades") [0].value;
 
-    urlCompleta = "segundaWeb.html#" + cantidad + "#" + unidad;
+    urlCompleta = "segundaWeb.html#" + distancia + "#" + unidad;
     window.open(urlCompleta)
 }
 
 function cargarResultado() {
-    let urlCompleta, cantidad, unidad;
+    let urlCompleta, distancia, unidad;
 
     urlCompleta = window.location.href.split("/")[5];
-    cantidad = urlCompleta.split("#")[1];
+    distancia = urlCompleta.split("#")[1];
     unidad = urlCompleta.split("#")[2];
 
-    document.getElementById("dist").value = cantidad + " " + unidad;
+    document.getElementById("dist").value = distancia + " " + unidad;
+}
+
+function guardarLocalStorage() {
+    let distancia, unidad;
+    distancia = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades") [0].value;
+    localStorage.setItem("distanciaLS", distancia);
+    localStorage.setItem("unidadesLS", unidad);
+    window.open('2_web.html');
+}
+
+function cargarLocalStorage() {
+    let distancia, unidad;
+    distancia = localStorage.getItem('distanciaLS');
+    unidad = localStorage.getItem('unidadesLS');
+
+    document.getElementById('dist').value = distancia + ' ' + unidad;
 }

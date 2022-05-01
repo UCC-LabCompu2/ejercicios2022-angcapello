@@ -219,7 +219,7 @@ function dibujarCirCuad() {
 
 let bandera;
 
-function dibujar(mousemove) {
+function dibujar() {
     let canvas = document.getElementById("canvasAdibujar");
     let ctx = canvas.getContext("2d");
 
@@ -292,4 +292,18 @@ function dibujarCuadriculado() {
     ctx.strokeStyle = "#ff1919";
     ctx.stroke();
     ctx.closePath();
+}
+
+function dibujarImagen(posX, posY) {
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    let img = new Image();
+    img.src = "images/auto.png";
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    img.onload = function () {
+        ctx.drawImage(img, posX, posY);
+    }
 }

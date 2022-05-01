@@ -298,12 +298,33 @@ function dibujarImagen(posX, posY) {
     let canvas = document.getElementById("myCanvas");
     let ctx = canvas.getContext("2d");
 
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     let img = new Image();
     img.src = "images/auto.png";
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     img.onload = function () {
         ctx.drawImage(img, posX, posY);
     }
+}
+
+x = 0;
+dx = 2;
+
+function animarAuto() {
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x, 100);
+    }
+    if (x > canvas.width) {
+        x = 0;
+    }
+
+    x += dx;
 }

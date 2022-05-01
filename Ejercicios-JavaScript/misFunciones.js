@@ -219,7 +219,7 @@ function dibujarCirCuad() {
 
 let bandera;
 
-function dibujar(MouseEvent) {
+function dibujar(mousemove) {
     let canvas = document.getElementById("canvasAdibujar");
     let ctx = canvas.getContext("2d");
 
@@ -246,5 +246,50 @@ function limpiarCanvas() {
     let canvas = document.getElementById("canvasAdibujar");
     let ctx = canvas.getContext("2d");
 
-    canvas.width = canvas.width;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //canvas.width = canvas.width;
+}
+
+function dibujarCuadriculado() {
+    let canvas = document.getElementById("myCanvas")
+    let ctx = canvas.getContext("2d");
+    let anchoMax = canvas.width;
+    let alturaMax = canvas.height;
+
+
+    //Dibujar lineas horizontales
+    ctx.beginPath();
+    for (let i = 0; i < alturaMax; i += 20) {
+        ctx.moveTo(0, i);
+        ctx.lineTo(anchoMax, i);
+        ctx.strokeStyle = "#2319ff";
+        ctx.stroke();
+    }
+    ctx.closePath();
+
+    //Dibujar lineas verticales
+    ctx.beginPath();
+    for (let i = 0; i < anchoMax; i += 20) {
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, alturaMax);
+        ctx.strokeStyle = "#2319ff";
+        ctx.stroke();
+    }
+    ctx.closePath();
+
+    //Eje X
+    ctx.beginPath();
+    ctx.moveTo(0, alturaMax / 2);
+    ctx.lineTo(anchoMax, alturaMax / 2);
+    ctx.strokeStyle = "#ff1919";
+    ctx.stroke();
+    ctx.closePath();
+
+    //Eje Y
+    ctx.beginPath();
+    ctx.moveTo(anchoMax / 2, 0);
+    ctx.lineTo(anchoMax / 2, alturaMax);
+    ctx.strokeStyle = "#ff1919";
+    ctx.stroke();
+    ctx.closePath();
 }
